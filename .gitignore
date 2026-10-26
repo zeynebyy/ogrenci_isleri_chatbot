@@ -1,0 +1,57 @@
+# Python
+venv/
+venv_*/
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Node.js / Next.js
+node_modules/
+.next/
+out/
+build/
+dist/
+coverage/
+*.tsbuildinfo
+next-env.d.ts
+
+# Local credentials
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Generated retrieval resources
+*.faiss
+/data/processed_chunks_index_meta.json
+/data/vector_meta.json
+/data/database/
+/data/raw_text/
+/data/cleaned_text/
+/data/fiches/
+/data/fiches.json
+*.db
+*.sqlite
+*.sqlite3
+*.db-wal
+*.db-shm
+
+# Local copy and legacy frontend with its own Git history
+/ogrenci_isleri_chatbot/
+/frontend/
+
+# Generated artifacts and local work
+/outputs/
+/scratch/
+/report_assets/
+/poster_assets/
+*.log
+.vercel/
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/

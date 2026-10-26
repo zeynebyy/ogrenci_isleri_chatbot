@@ -1,0 +1,16 @@
+pdfplumber
+pydantic
+sentence-transformers
+faiss-cpu
+requests
+fastapi
+uvicorn
+langchain
+langchain-community
+langchain-ollama
+rank_bm25
+beautifulsoup4
+markdown
+python-multipart
+python-dotenv
+tiktoken
