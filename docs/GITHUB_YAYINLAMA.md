@@ -25,6 +25,22 @@ rag chatbot turkish student-affairs nextjs fastapi ollama faiss bm25 sentence-tr
 
 `REPOR_TURKCE.md` önceki modernizasyon notlarını içerir. Güncel kurulum ve davranış için kök README esas alınmalıdır.
 
+## Yayın öncesi doğrulama
+
+26 Ekim 2026 tarihinde mevcut yerel ortamda:
+
+| Kontrol | Sonuç |
+| --- | --- |
+| `frontend_v2`: `npm run build` | Başarılı; TypeScript ve statik sayfa üretimi tamamlandı. |
+| `python -m src.test_rag_guardrails` | Mevcut `venv` ve yerel E5 önbelleğiyle başarılı. |
+| İşlenmiş veri şeması | 302 parçanın içerik ve metadata alanları doğrulandı. |
+| Yayın dosyaları | Ortam, bağımlılık, özel anahtar ve yaygın token kalıpları kontrol edildi; eşleşme bulunmadı. Bu kontrol tam bir güvenlik denetimi değildir. |
+| `frontend_v2`: `npm run lint` | Başarısız: `page.tsx` başlangıç tema efektindeki mevcut `react-hooks/set-state-in-effect` hatası. |
+
+Bu yayın hazırlığında uygulama davranışı değiştirilmedi. ESLint hatası, `useEffect` içinde başlangıç temasını `setTheme` ile doğrudan atayan mevcut koddadır. Temanın ilk yükleme ve tarayıcı tercihiyle eşitlenmesi ayrıca düzenlenmelidir.
+
+Yerel kontroller temiz bir makinede sıfırdan kurulum yapıldığı anlamına gelmez. Python sürümleri sabitlenmediği için yeni ortam kurulumu ayrıca doğrulanmalıdır.
+
 ## Yayından sonra
 
 1. About alanına kısa açıklamayı ve konu etiketlerini ekle.

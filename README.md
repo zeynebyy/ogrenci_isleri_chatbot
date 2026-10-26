@@ -289,6 +289,8 @@ npm run build
 
 `next/font/google` nedeniyle derleme sırasında Google Fonts erişimi gerekebilir. Diğer `src/test_*.py` betiklerinin bir bölümü eski veri ve indeksleri bekler; hepsi tek bir güncel test paketi olarak değerlendirilmemelidir.
 
+26 Ekim 2026 tarihli yayın hazırlığında üretim derlemesi ve RAG davranış kontrolleri başarılı oldu. ESLint, `frontend_v2/src/app/page.tsx` içindeki başlangıç tema efektinde mevcut `react-hooks/set-state-in-effect` hatasını bildirdi; lint kontrolü henüz başarılı değildir. Ayrıntılar [doğrulama notlarında](docs/GITHUB_YAYINLAMA.md#yayın-öncesi-doğrulama) yer alır.
+
 ## Bilinen sınırlamalar
 
 - Sistem canlı yönerge veya güncel duyuru çekmez. Belgeler yenilenmedikçe yanıtlar güncelliğini kaybedebilir.
